@@ -70,20 +70,20 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="index.php">Início</a>
+                        <a href="../index.php">Início</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Clientes <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="../clientes/add.php">Novo Cliente</a></li>
-                            <li><a href="../clientes/index.php">Visualizar Clientes</a></li>
+                            <li><a href="../cliente/add.php">Novo Cliente</a></li>
+                            <li><a href="../cliente/index.php">Visualizar Clientes</a></li>
                         </ul>
                     </li>
 
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Ordem de Serviço <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="../ordemServicos/add.php">Nova OS</a></li>
+                            <li><a href="../ordemServico/add.php">Nova OS</a></li>
                             <li><a href="">Visualizar OS</a></li>
                         </ul>
                     </li>
@@ -91,15 +91,15 @@
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Administração <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="../servicos/add.php">Novo Serviço</a></li>
-                            <li><a href="../situacoes/add.php">Nova Situação</a></li>
-                            <li><a href="../metodoPagamentos/add.php">Novo Método de Pagamento</a></li>
-                            <li><a href="../formaPagamentos/add.php">Nova Forma de Pagamento</a></li>
+                            <li><a href="../servico/add.php">Novo Serviço</a></li>
+                            <li><a href="../situacao/add.php">Nova Situação</a></li>
+                            <li><a href="../metodoPagamento/add.php">Novo Método de Pagamento</a></li>
+                            <li><a href="../formaPagamento/add.php">Nova Forma de Pagamento</a></li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="../servicos/add.php">Serviços</a>
+                        <a href="#">Serviços</a>
                     </li>
                     <li>
                         <a href="#">Contato</a>
