@@ -1,7 +1,7 @@
 <?php
 include_once("Servico.php");
 
-$servico = new Situacao();
+$servico = new Servico();
 
 switch ($_GET['acao']){
     case 'salvar':

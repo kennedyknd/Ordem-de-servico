@@ -2,7 +2,7 @@
 include_once('../cabecalho.php');
 include_once 'Servico.php';
 
-$servico = new Situacao();
+$servico = new Servico();
 
 if(!empty($_GET['id_servico'])){
     $servico->carregarPorId($_GET['id_servico']);

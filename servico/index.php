@@ -1,6 +1,6 @@
 <?php
 include_once("Servico.php");
-$servico = new Situacao();
+$servico = new Servico();
 
 $servicos = $servico->recuperarDados();
 
@@ -36,7 +36,7 @@ include_once '../cabecalho.php';
                     <a href='processamento.php?acao=excluir&id_servico={$servico['id_servico']}' class=\"btn btn-sm btn-danger\">Excluir</a>
                 </td>
                 <td>{$servico['id_servico']}</td>
-                <td>{$servico['Situacao']}</td>
+                <td>{$servico['servico']}</td>
                 <td>{$servico['observacao']}</td>
             </tr>
         ";
