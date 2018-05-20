@@ -4,58 +4,58 @@ include_once("../Conexao.php");
 
 class Situacao
 {
-    protected $id_servico;
-    protected $servico;
-    protected $observacao;
+    protected $id_situacao;
+    protected $situacao;
+    protected $descricao;
     protected $criado;
     protected $modificado;
 
     /**
      * @return mixed
      */
-    public function getIdServico()
+    public function getIdSituacao()
     {
-        return $this->id_servico;
+        return $this->id_situacao;
     }
 
     /**
-     * @param mixed $id_servico
+     * @param mixed $id_situacao
      */
-    public function setIdServico($id_servico)
+    public function setIdSituacao($id_situacao)
     {
-        $this->id_servico = $id_servico;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getServico()
-    {
-        return $this->servico;
-    }
-
-    /**
-     * @param mixed $servico
-     */
-    public function setServico($servico)
-    {
-        $this->servico = $servico;
+        $this->id_situacao = $id_situacao;
     }
 
     /**
      * @return mixed
      */
-    public function getObservacao()
+    public function getSituacao()
     {
-        return $this->observacao;
+        return $this->situacao;
     }
 
     /**
-     * @param mixed $observacao
+     * @param mixed $situacao
      */
-    public function setObservacao($observacao)
+    public function setSituacao($situacao)
     {
-        $this->observacao = $observacao;
+        $this->situacao = $situacao;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescricao()
+    {
+        return $this->descricao;
+    }
+
+    /**
+     * @param mixed $descricao
+     */
+    public function setDescricao($descricao)
+    {
+        $this->descricao = $descricao;
     }
 
     /**
@@ -90,35 +90,36 @@ class Situacao
         $this->modificado = $modificado;
     }
 
+
     public function recuperarDados()
     {
         $conexao = new Conexao();
 
-        $sql = "SELECT * FROM servico";
+        $sql = "SELECT * FROM situacao";
         return $conexao->recuperarDados($sql);
     }
 
-    public function carregarPorId($id_servico)
+    public function carregarPorId($id_situacao)
     {
         $conexao = new Conexao();
 
-        $sql = "SELECT * FROM servico WHERE id_servico = $id_servico";
+        $sql = "SELECT * FROM situacao WHERE id_situacao = $id_situacao";
         $dados = $conexao->recuperarDados($sql);
 
-        $this->id_servico = $dados[0]['id_servico'];
-        $this->servico = $dados[0]['Situacao'];
-        $this->observacao = $dados[0]['observacao'];
+        $this->id_situacao = $dados[0]['id_situacao'];
+        $this->situacao = $dados[0]['situacao'];
+        $this->descricao = $dados[0]['descricao'];
     }
 
     public function inserir($dados)
     {
         $conexao = new Conexao();
 
-        $servico = $dados['Situacao'];
-        $observacao = $dados['observacao'];
+        $situacao = $dados['situacao'];
+        $descricao = $dados['descricao'];
 
 
-        $sql = "INSERT INTO servico(servico,observacao) VALUES('$servico','$observacao')";
+        $sql = "INSERT INTO situacao(situacao,descricao) VALUES('$situacao','$descricao')";
 
         return $conexao->executar($sql);
     }
@@ -127,19 +128,20 @@ class Situacao
     {
         $conexao = new Conexao();
 
-        $id_servico = $dados['id_servico'];
-        $servico = $dados['Situacao'];
+        $id_situacao = $dados['id_situacao'];
+        $situacao = $dados['situacao'];
+        $descricao = $dados['descricao'];
 
-        $sql = "UPDATE servico SET servico = '$servico' WHERE id_servico = $id_servico";
+        $sql = "UPDATE situacao SET situacao = '$situacao', descricao = '$descricao' WHERE id_situacao = $id_situacao";
 
         return $conexao->executar($sql);
     }
 
-    public function excluir($id_servico)
+    public function excluir($id_situacao)
     {
         $conexao = new Conexao();
 
-        $sql = "DELETE FROM servico WHERE id_servico = $id_servico";
+        $sql = "DELETE FROM situacao WHERE id_situacao = $id_situacao";
 
         return $conexao->executar($sql);
     }

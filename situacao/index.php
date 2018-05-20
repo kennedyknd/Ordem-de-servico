@@ -1,20 +1,20 @@
 <?php
 include_once("Situacao.php");
-$servico = new Situacao();
+$situacao = new Situacao();
 
-$servicos = $servico->recuperarDados();
+$situacoes = $situacao->recuperarDados();
 
 include_once '../cabecalho.php';
 ?>
 
-    <h1 class="text-center">Serviços</h1>
+    <h1 class="text-center">Situação</h1>
     <br>
     <header>
         <div class="row">
             <div class="col-sm-6">
             </div>
             <div class="col-sm-6 text-right h2">
-                <a class="btn btn-primary" href="add.php"><i class="fa fa-plus"></i> Novo Serviço</a>
+                <a class="btn btn-primary" href="add.php"><i class="fa fa-plus"></i> Nova Situação</a>
                 <a class="btn btn-default" href="index.php"><i class="fa fa-refresh"></i> Atualizar</a>
             </div>
         </div>
@@ -28,16 +28,16 @@ include_once '../cabecalho.php';
             <td>Observação</td>
         </tr>
 
-        <?php foreach ($servicos as $servico){
+        <?php foreach ($situacoes as $situacao){
             echo "
             <tr>
                 <td>
-                    <a href='add.php?id_servico={$servico['id_servico']}' class=\"btn btn-sm btn-warning\">Editar</a>
-                    <a href='processamento.php?acao=excluir&id_servico={$servico['id_servico']}' class=\"btn btn-sm btn-danger\">Excluir</a>
+                    <a href='add.php?id_situacao={$situacao['id_situacao']}' class=\"btn btn-sm btn-warning\">Editar</a>
+                    <a href='processamento.php?acao=excluir&id_situacao={$situacao['id_situacao']}' class=\"btn btn-sm btn-danger\">Excluir</a>
                 </td>
-                <td>{$servico['id_servico']}</td>
-                <td>{$servico['Situacao']}</td>
-                <td>{$servico['observacao']}</td>
+                <td>{$situacao['id_situacao']}</td>
+                <td>{$situacao['situacao']}</td>
+                <td>{$situacao['descricao']}</td>
             </tr>
         ";
         } ?>
