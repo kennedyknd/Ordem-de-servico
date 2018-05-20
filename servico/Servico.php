@@ -129,8 +129,9 @@ class Servico
 
         $id_servico = $dados['id_servico'];
         $servico = $dados['servico'];
+        $observacao = $dados['observacao'];
 
-        $sql = "UPDATE servico SET servico = '$servico' WHERE id_servico = $id_servico";
+        $sql = "UPDATE servico SET servico = '$servico', observacao = '$observacao' WHERE id_servico = $id_servico";
 
         return $conexao->executar($sql);
     }
