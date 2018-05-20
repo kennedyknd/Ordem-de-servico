@@ -4,7 +4,7 @@ include_once("../Conexao.php");
 
 class Servico
 {
-    protected $id_servicos;
+    protected $id_servico;
     protected $servico;
     protected $observacao;
     protected $criado;
@@ -13,17 +13,17 @@ class Servico
     /**
      * @return mixed
      */
-    public function getIdServicos()
+    public function getIdServico()
     {
-        return $this->id_servicos;
+        return $this->id_servico;
     }
 
     /**
-     * @param mixed $id_servicos
+     * @param mixed $id_servico
      */
-    public function setIdServicos($id_servicos)
+    public function setIdServico($id_servico)
     {
-        $this->id_servicos = $id_servicos;
+        $this->id_servico = $id_servico;
     }
 
     /**
@@ -94,39 +94,52 @@ class Servico
     {
         $conexao = new Conexao();
 
-        $sql = "SELECT * FROM servicos";
+        $sql = "SELECT * FROM servico";
         return $conexao->recuperarDados($sql);
+    }
+
+    public function carregarPorId($id_servico)
+    {
+        $conexao = new Conexao();
+
+        $sql = "SELECT * FROM servico WHERE id_servico = $id_servico";
+        $dados = $conexao->recuperarDados($sql);
+
+        $this->id_servico = $dados[0]['id_servico'];
+        $this->servico = $dados[0]['servico'];
+        $this->observacao = $dados[0]['observacao'];
     }
 
     public function inserir($dados)
     {
+        $conexao = new Conexao();
+
         $servico = $dados['servico'];
         $observacao = $dados['observacao'];
 
-        $conexao = new Conexao();
 
-        $sql = "INSERT INTO servicos(servico,observacao) VALUES('$servico','$observacao')";
+        $sql = "INSERT INTO servico(servico,observacao) VALUES('$servico','$observacao')";
 
         return $conexao->executar($sql);
     }
 
-    public function editar($dados, $id_servicos)
+    public function alterar($dados)
     {
-        $servico = $dados['servico'];
-        $observacao = $dados['observacao'];
-
         $conexao = new Conexao();
 
-        $sql = "UPDATE servicos SET servico = '$servico', observacao = '$observacao' WHERE id_servicos = $id_servicos";
+        $id_servico = $dados['id_servico'];
+        $servico = $dados['servico'];
+
+        $sql = "UPDATE servico SET servico = '$servico' WHERE id_servico = $id_servico";
 
         return $conexao->executar($sql);
     }
 
-    public function excluir($id_servicos)
+    public function excluir($id_servico)
     {
         $conexao = new Conexao();
 
-        $sql = "DELETE FROM servicos WHERE id_servicos = $id_servicos";
+        $sql = "DELETE FROM servico WHERE id_servico = $id_servico";
 
         return $conexao->executar($sql);
     }

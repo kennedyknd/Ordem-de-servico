@@ -1,17 +1,18 @@
 <?php
 include_once("Servico.php");
 
-$servico = new Servico();
+$servico = new Situacao();
 
 switch ($_GET['acao']){
     case 'salvar':
-        $servico->inserir($_POST);
+        if(!empty($_POST['id_servico'])) {
+            $servico->alterar($_POST);
+        } else {
+            $servico->inserir($_POST);
+        }
         break;
     case 'excluir':
-        $servico->excluir($_GET['id_servicos']);
-        break;
-    case 'editar':
-        $servico->editar($_POST, $_GET['id_servicos']);
+        $servico->excluir($_GET['id_servico']);
         break;
 }
 

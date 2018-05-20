@@ -1,6 +1,6 @@
 <?php
 include_once("Servico.php");
-$servico = new Servico();
+$servico = new Situacao();
 
 $servicos = $servico->recuperarDados();
 
@@ -32,11 +32,11 @@ include_once '../cabecalho.php';
             echo "
             <tr>
                 <td>
-                    <a href='edit.php?id_servicos={$servico['id_servicos']}' class=\"btn btn-sm btn-warning\">Editar</a>
-                    <a href='processamento.php?acao=excluir&id_servicos={$servico['id_servicos']}' class=\"btn btn-sm btn-danger\">Excluir</a>
-                    </td>
-                <td>{$servico['id_servicos']}</td>
-                <td>{$servico['servico']}</td>
+                    <a href='add.php?id_servico={$servico['id_servico']}' class=\"btn btn-sm btn-warning\">Editar</a>
+                    <a href='processamento.php?acao=excluir&id_servico={$servico['id_servico']}' class=\"btn btn-sm btn-danger\">Excluir</a>
+                </td>
+                <td>{$servico['id_servico']}</td>
+                <td>{$servico['Situacao']}</td>
                 <td>{$servico['observacao']}</td>
             </tr>
         ";
