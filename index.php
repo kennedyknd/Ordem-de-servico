@@ -83,7 +83,7 @@
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Ordem de Serviço <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="../ordemServicos/add.php">Nova OS</a></li>
+                            <li><a href="../ordemServico/add.php">Nova OS</a></li>
                             <li><a href="">Visualizar OS</a></li>
                         </ul>
                     </li>
