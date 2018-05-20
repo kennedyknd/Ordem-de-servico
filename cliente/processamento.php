@@ -5,10 +5,14 @@ $cliente = new Cliente();
 
 switch ($_GET['acao']){
     case 'salvar':
-        $cliente->inserir($_POST);
+        if(!empty($_POST['id_cliente'])) {
+            $cliente->alterar($_POST);
+        } else {
+            $cliente->inserir($_POST);
+        }
         break;
     case 'excluir':
-        $cliente->excluir($_GET['id_clientes']);
+        $cliente->excluir($_GET['id_cliente']);
         break;
 }
 

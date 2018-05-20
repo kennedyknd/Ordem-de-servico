@@ -4,7 +4,7 @@ include_once("../Conexao.php");
 
 class Cliente
 {
-    protected $id_clientes;
+    protected $id_cliente;
     protected $nome;
     protected $datanasci;
     protected $email;
@@ -26,17 +26,17 @@ class Cliente
     /**
      * @return mixed
      */
-    public function getIdClientes()
+    public function getIdCliente()
     {
-        return $this->id_clientes;
+        return $this->id_cliente;
     }
 
     /**
-     * @param mixed $id_clientes
+     * @param mixed $id_cliente
      */
-    public function setIdClientes($id_clientes)
+    public function setIdCliente($id_cliente)
     {
-        $this->id_clientes = $id_clientes;
+        $this->id_cliente = $id_cliente;
     }
 
     /**
@@ -315,12 +315,39 @@ class Cliente
     {
         $conexao = new Conexao();
 
-        $sql = "SELECT * FROM clientes";
+        $sql = "SELECT * FROM cliente";
         return $conexao->recuperarDados($sql);
+    }
+
+    public function carregarPorId($id_cliente)
+    {
+        $conexao = new Conexao();
+
+        $sql = "SELECT * FROM cliente WHERE id_cliente = $id_cliente";
+        $dados = $conexao->recuperarDados($sql);
+
+        $this->id_cliente= $dados[0]['id_cliente'];
+        $this->nome = $dados[0]['nome'];
+        $this->datanasci = $dados[0]['datanasci'];
+        $this->email = $dados[0]['email'];
+        $this->cpf = $dados[0]['cpf'];
+        $this->telefone = $dados[0]['telefone'];
+        $this->celular = $dados[0]['celular'];
+        $this->rg = $dados[0]['rg'];
+        $this->sexo = $dados[0]['sexo'];
+        $this->cep = $dados[0]['cep'];
+        $this->logradouro = $dados[0]['logradouro'];
+        $this->bairro = $dados[0]['bairro'];
+        $this->cidade = $dados[0]['cidade'];
+        $this->uf = $dados[0]['uf'];
+        $this->numero = $dados[0]['numero'];
+        $this->complemento = $dados[0]['complemento'];
     }
 
     public function inserir($dados)
     {
+        $conexao = new Conexao();
+
         $nome = $dados['nome'];
         $datanasci = $dados['datanasci'];
         $email = $dados['email'];
@@ -337,20 +364,45 @@ class Cliente
         $numero = $dados['numero'];
         $complemento = $dados['complemento'];
 
-        $conexao = new Conexao();
-
-        $sql = "INSERT INTO clientes (nome, datanasci, email, cpf, telefone, celular, rg, sexo, cep, logradouro, bairro, cidade, uf, numero, complemento)";
+        $sql = "INSERT INTO cliente (nome, datanasci, email, cpf, telefone, celular, rg, sexo, cep, logradouro, bairro, cidade, uf, numero, complemento)";
         $sql .= " VALUES ('$nome','$datanasci','$email','$cpf','$telefone','$celular','$rg','$sexo','$cep','$logradouro','$bairro','$cidade','$uf','$numero','$complemento')";
 
         return $conexao->executar($sql);
     }
 
-    public function excluir($id_clientes)
+    public function alterar($dados)
+    {
+        $conexao = new Conexao();
+
+
+        $id_cliente = $dados['id_cliente'];
+        $nome = $dados['nome'];
+        $datanasci = $dados['datanasci'];
+        $email = $dados['email'];
+        $cpf = $dados['cpf'];
+        $telefone = $dados['telefone'];
+        $celular = $dados['celular'];
+        $rg = $dados['rg'];
+        $sexo = $dados['sexo'];
+        $cep = $dados['cep'];
+        $logradouro = $dados['logradouro'];
+        $bairro = $dados['bairro'];
+        $cidade = $dados['cidade'];
+        $uf = $dados['uf'];
+        $numero = $dados['numero'];
+        $complemento = $dados['complemento'];
+
+        $sql = "UPDATE cliente SET nome = '$nome', datanasci = '$datanasci', email = '$email', cpf = '$cpf', telefone = '$telefone', celular = '$celular', rg = '$rg', sexo = '$sexo', cep = '$cep', logradouro = '$logradouro', bairro = '$bairro', cidade = '$cidade', uf = '$uf', numero = '$numero', complemento = '$complemento' WHERE id_cliente = $id_cliente";
+
+        return $conexao->executar($sql);
+    }
+
+    public function excluir($id_cliente)
     {
 
         $conexao = new Conexao();
 
-        $sql = "DELETE FROM clientes WHERE id_clientes = $id_clientes";
+        $sql = "DELETE FROM cliente WHERE id_cliente = $id_cliente";
 
 
         return $conexao->executar($sql);
