@@ -147,10 +147,10 @@ if(!empty($_GET['id_cliente'])){
                 <label for="sexo" class="col-sm-2 control-label">Sexo</label><br/>
                 <div class="col-sm-10">
                     <label class="radio-inline">
-                        <input type="radio" name="sexo" id="sexo" value="F" required> Feminino
+                        <input type="radio" name="sexo" id="sexo" value="F" required <?= (($cliente->getSexo())=='F')?'Checked':''?>> Feminino
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="sexo" id="sexo" value="M" required> Masculino
+                        <input type="radio" name="sexo" id="sexo" value="M" required <?= (($cliente->getSexo())=='M')?'Checked':''?>> Masculino
                     </label>
                 </div>
             </div>

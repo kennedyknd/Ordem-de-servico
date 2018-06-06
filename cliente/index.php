@@ -37,6 +37,7 @@ include_once '../cabecalho.php';
                 <td>
                     <a href='add.php?id_cliente={$cliente['id_cliente']}' class=\"btn btn-sm btn-warning\">Editar</a>
                     <a href='processamento.php?acao=excluir&id_cliente={$cliente['id_cliente']}' class=\"btn btn-sm btn-danger\">Excluir</a>
+                    <a href='view.php?id_cliente={$cliente['id_cliente']}' class=\"btn btn-sm btn-info\">Visualizar</a>
                 </td>
                 <td>{$cliente['id_cliente']}</td>
                 <td>{$cliente['nome']}</td>
