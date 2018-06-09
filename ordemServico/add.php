@@ -56,11 +56,12 @@ if(!empty($_GET['id_ordemServico'])){
             <div class="form-group col-md-4">
                 <label for="id_cliente" class="control-label">Cliente</label>
 
-                <select name="id_cliente" id="id_cliente" class="form-control">
+                <select name="id_cliente" id="id_cliente" class="form-control chosen">
                     <option>Selecione</option>
 
                     <?php foreach ($clientes as $cliente){
-                        echo "<option value='{$cliente['id_cliente']}'>{$cliente['nome']}</option>";
+                        $checked = $cliente['id_cliente'] == $ordemServico->getIdCliente() ? 'selected' : '';
+                        echo "<option $checked value='{$cliente['id_cliente']}'>{$cliente['nome']}</option>";
                     } ?>
                 </select>
 
@@ -80,11 +81,12 @@ if(!empty($_GET['id_ordemServico'])){
             <div class="form-group col-md-4">
                 <label for="id_servico" class="control-label">Serviço</label>
 
-                <select name="id_servico" id="id_servico" class="form-control">
+                <select name="id_servico" id="id_servico" class="form-control chosen">
                     <option>Selecione</option>
 
                     <?php foreach ($servicos as $servico){
-                        echo "<option value='{$servico['id_servico']}'>{$servico['servico']}</option>";
+                        $checked = $servico['id_servico'] == $ordemServico->getIdServico() ? 'selected' : '';
+                        echo "<option $checked value='{$servico['id_servico']}'>{$servico['servico']}</option>";
                     } ?>
                 </select>
 
@@ -97,7 +99,8 @@ if(!empty($_GET['id_ordemServico'])){
                     <option>Selecione</option>
 
                     <?php foreach ($formaPagamentos as $formaPagamento){
-                        echo "<option value='{$formaPagamento['id_formaPagamento']}'>{$formaPagamento['tipo']}</option>";
+                        $checked = $formaPagamento['id_formaPagamento'] == $ordemServico->getIdFormaPagamento() ? 'selected' : '';
+                        echo "<option $checked value='{$formaPagamento['id_formaPagamento']}'>{$formaPagamento['tipo']}</option>";
                     } ?>
                 </select>
 
@@ -109,7 +112,8 @@ if(!empty($_GET['id_ordemServico'])){
                     <option>Selecione</option>
 
                     <?php foreach ($metodoPagamentos as $metodoPagamento){
-                        echo "<option value='{$metodoPagamento['id_metodoPagamento']}'>{$metodoPagamento['tipo']}</option>";
+                        $checked = $metodoPagamento['id_metodoPagamento'] == $ordemServico->getIdMetodoPagamento() ? 'selected' : '';
+                        echo "<option $checked value='{$metodoPagamento['id_metodoPagamento']}'>{$metodoPagamento['tipo']}</option>";
                     } ?>
                 </select>
 
@@ -125,7 +129,8 @@ if(!empty($_GET['id_ordemServico'])){
                     <option>Selecione</option>
 
                     <?php foreach ($situacoes as $situacao){
-                        echo "<option value='{$situacao['id_situacao']}'>{$situacao['situacao']}</option>";
+                        $checked = $situacao['id_situacao'] == $ordemServico->getIdSituacao() ? 'selected' : '';
+                        echo "<option $checked value='{$situacao['id_situacao']}'>{$situacao['situacao']}</option>";
                     } ?>
                 </select>
 

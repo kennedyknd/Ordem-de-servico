@@ -10,12 +10,12 @@ if(!empty($_GET['id_situacao'])){
 ?>
 
     <head>
-        <title>Novo Serviço</title>
+        <title>Nova Situação</title>
     </head>
 
 <div class="container">
 
-    <h2>Novo Serviço</h2>
+    <h2>Nova Situação</h2>
 
     <form class="form-horizontal" method="post" action="processamento.php?acao=salvar">
 
@@ -25,12 +25,12 @@ if(!empty($_GET['id_situacao'])){
         <hr />
         <div class="row">
             <div class="form-group col-md-6">
-                <label for="situacao">Serviço</label>
+                <label for="situacao">Situação</label>
                 <input type="text" class="form-control" value="<?php echo $situacao->getSituacao();?>" id="situacao" name="situacao" required>
             </div>
 
             <div class="form-group col-md-6">
-                <label for="descricao">Observação</label>
+                <label for="descricao">Descrição</label>
                 <input type="text" class="form-control" value="<?php echo $situacao->getDescricao();?>" id="descricao" name="descricao" required>
             </div>
 

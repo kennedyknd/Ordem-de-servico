@@ -25,7 +25,7 @@ if(!empty($_GET['id_metodoPagamento'])){
         <hr />
         <div class="row">
             <div class="form-group col-md-6">
-                <label for="tipo">Forma de Pagamento</label>
+                <label for="tipo">Método de Pagamento</label>
                 <input type="text" class="form-control" value="<?php echo $metodoPagamento->getTipo();?>" id="tipo" name="tipo" required>
             </div>
 
