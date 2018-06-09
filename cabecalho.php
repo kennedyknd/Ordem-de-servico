@@ -2,11 +2,19 @@
 <head>
 
     <link rel="stylesheet" href="../js/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../js/chosen/chosen.css"/>
     <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="../js/jquery.maskedinput.js"></script>
     <script type="text/javascript" src="../js/sweetalert2.all.js"></script>
     <script src="../js/bootstrap/js/bootstrap.min.js"></script>
     <!--    <script src="boostrap/js/main.js"></script>-->
+    <script type="text/javascript" src="../js/chosen/chosen.jquery.js"></script>
+
+    <script>
+        $(function(){
+            $('.chosen').chosen();
+        })
+    </script>
 
     <style>
         .cabecalho {
@@ -91,18 +99,15 @@
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Administração <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="../servico/add.php">Novo Serviço</a></li>
-                            <li><a href="../situacao/add.php">Nova Situação</a></li>
-                            <li><a href="../metodoPagamento/add.php">Novo Método de Pagamento</a></li>
-                            <li><a href="../formaPagamento/add.php">Nova Forma de Pagamento</a></li>
+                            <li><a href="servico/add.php">Novo Serviço</a></li>
+                            <li><a href="servico/index.php">Visualizar Serviços</a></li>
+                            <li><a href="situacao/add.php">Nova Situação</a></li>
+                            <li><a href="situacao/index.php">Visualizar Situações</a></li>
+                            <li><a href="metodoPagamento/add.php">Novo Método de Pagamento</a></li>
+                            <li><a href="metodoPagamento/index.php">Visualizar Métodos de Pagamento</a></li>
+                            <li><a href="formaPagamento/add.php">Nova Forma de Pagamento</a></li>
+                            <li><a href="formaPagamento/index.php">Visualizar Formas de Pagamento</a></li>
                         </ul>
-                    </li>
-
-                    <li>
-                        <a href="#">Serviços</a>
-                    </li>
-                    <li>
-                        <a href="#">Contato</a>
                     </li>
                 </ul>
             </div>
