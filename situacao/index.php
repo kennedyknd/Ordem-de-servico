@@ -7,6 +7,12 @@ $situacoes = $situacao->recuperarDados();
 include_once '../cabecalho.php';
 ?>
 
+    <head>
+
+        <title>Visualizar Situações</title>
+
+    </head>
+
     <h1 class="text-center">Situação</h1>
     <br>
     <header>

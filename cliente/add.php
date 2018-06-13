@@ -97,6 +97,8 @@ if(!empty($_GET['id_cliente'])){
 
     </head>
 
+    <div>
+
     <h2>Novo Cliente</h2>
 
     <form class="form-horizontal" method="post" action="processamento.php?acao=salvar">
@@ -105,45 +107,45 @@ if(!empty($_GET['id_cliente'])){
 
         <!-- area de campos do form -->
         <hr />
-        <div class="row">
-            <div class="form-group col-md-7">
+        <div class="row form-group">
+            <div class="col-md-7">
                 <label for="nome">Nome</label>
                 <input type="text" class="form-control" value="<?php echo $cliente->getNome();?>" id="nome" name="nome" required>
             </div>
 
-            <div class="form-group col-md-3">
+            <div class="col-md-3">
                 <label for="cpf">CPF</label>
                 <input type="text" class="form-control" value="<?php echo $cliente->getCpf();?>" id="cpf" name="cpf" required>
             </div>
-            <div class="form-group col-md-2">
+            <div class="col-md-2">
                 <label for="campo3">Data de Nascimento</label>
                 <input type="date" class="form-control" value="<?php echo $cliente->getDatanasci();?>" id="datanasci" name="datanasci" required>
             </div>
 
         </div>
-        <div class="row">
-            <div class="form-group col-md-7">
+        <div class="row form-group">
+            <div class="col-md-7">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" value="<?php echo $cliente->getEmail();?>" id="email" name="email" required>
             </div>
 
-            <div class="form-group col-md-3">
+            <div class="col-md-3">
                 <label for="rg">RG</label>
                 <input type="text" class="form-control" value="<?php echo $cliente->getRg();?>" id="rg" name="rg" required>
             </div>
-            <div class="form-group col-md-2">
+            <div class="col-md-2">
                 <label for="telefone">Telefone</label>
                 <input type="text" class="form-control" value="<?php echo $cliente->getTelefone();?>" id="telefone" name="telefone" required>
             </div>
 
         </div>
 
-        <div class="row">
-            <div class="form-group col-md-4">
+        <div class="row form-group">
+            <div class="col-md-4">
                 <label for="celular">Celular</label>
                 <input type="text" class="form-control" value="<?php echo $cliente->getCelular();?>" id="celular" name="celular" required>
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label for="sexo" class="col-sm-2 control-label">Sexo</label><br/>
                 <div class="col-sm-10">
                     <label class="radio-inline">
@@ -159,45 +161,45 @@ if(!empty($_GET['id_cliente'])){
 
         <h3>Endereço</h3>
 
-        <div class="row">
-            <div class="form-group col-md-4">
+        <div class="row form-group">
+            <div class="col-md-4">
                 <label for="cep">CEP</label>
                 <input class="form-control" value="<?php echo $cliente->getCep();?>" name="cep" type="text" id="cep" value=""
                        onblur="pesquisacep(this.value);" required />
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label for="logradouro">Logradouro</label>
                 <input type="text" class="form-control" value="<?php echo $cliente->getLogradouro();?>" id="logradouro" name="logradouro" readonly>
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label for="bairro">Bairro</label>
                 <input type="text" class="form-control" value="<?php echo $cliente->getBairro();?>" id="bairro" name="bairro" readonly>
             </div>
 
         </div>
 
-        <div class="row">
-            <div class="form-group col-md-4">
+        <div class="row form-group">
+            <div class="col-md-4">
                 <label for="cidade">Cidade</label>
                 <input type="text" class="form-control" value="<?php echo $cliente->getCidade();?>" id="cidade" name="cidade" readonly>
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label for="uf">UF</label>
                 <input type="text" class="form-control" value="<?php echo $cliente->getUf();?>" id="uf" name="uf" readonly>
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label for="ibge">IBGE</label>
                 <input type="text" class="form-control" id="ibge" name="" readonly>
             </div>
 
         </div>
 
-        <div class="row">
-            <div class="form-group col-md-4">
+        <div class="row form-group">
+            <div class="col-md-4">
                 <label for="numero">Número</label>
                 <input type="text" class="form-control" value="<?php echo $cliente->getNumero();?>" id="numero" name="numero" required>
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label for="complemento">Complemento</label>
                 <input type="text" class="form-control" value="<?php echo $cliente->getComplemento();?>" id="complemento" name="complemento" required>
             </div>
@@ -210,8 +212,9 @@ if(!empty($_GET['id_cliente'])){
                 <a class="btn btn-danger" href="index.php">Voltar</a>
             </div>
         </div>
-    </form>
 
+    </form>
+    </div>
 <?php
 include_once ('../rodape.php');
 ?>

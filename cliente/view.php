@@ -97,9 +97,10 @@ if(!empty($_GET['id_cliente'])){
 
     </head>
 
+    <div class="container">
+
     <h2>Dados do Cliente</h2>
 
-    <div class="container">
 
         <input type="hidden" name="id_cliente" class="form-control" value="<?php echo $cliente->getIdCliente();?>">
 
@@ -117,7 +118,7 @@ if(!empty($_GET['id_cliente'])){
             <td><strong>Sexo: </strong> <?php $sex = $cliente->getSexo(); if ( $sex == 'M' ) { echo 'Masculino' ;} else { echo 'Feminino';}?></td> <br/>
             <h3>Endereço</h3>
             <td><strong>CEP: </strong> <?php echo $cliente->getCep();?></td> <br/>
-            <td><strong>Logradouro: </strong> <?php echo $cliente->getNome();?></td> <br/>
+            <td><strong>Logradouro: </strong> <?php echo $cliente->getLogradouro();?></td> <br/>
             <td><strong>Bairro: </strong> <?php echo $cliente->getBairro();?></td> <br/>
             <td><strong>Cidade: </strong> <?php echo $cliente->getCidade();?></td> <br/>
             <td><strong>UF: </strong> <?php echo $cliente->getUf();?></td> <br/>

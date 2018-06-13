@@ -7,6 +7,12 @@ $servicos = $servico->recuperarDados();
 include_once '../cabecalho.php';
 ?>
 
+    <head>
+
+        <title>Visualizar Serviços</title>
+
+    </head>
+
     <h1 class="text-center">Serviços</h1>
     <br>
     <header>

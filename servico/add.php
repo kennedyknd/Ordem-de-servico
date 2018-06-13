@@ -13,7 +13,7 @@ if(!empty($_GET['id_servico'])){
         <title>Novo Serviço</title>
     </head>
 
-<div class="container">
+<div>
 
     <h2>Novo Serviço</h2>
 
@@ -23,13 +23,13 @@ if(!empty($_GET['id_servico'])){
 
         <!-- area de campos do form -->
         <hr />
-        <div class="row">
-            <div class="form-group col-md-6">
+        <div class="row form-group">
+            <div class="col-md-6">
                 <label for="servico">Serviço</label>
                 <input type="text" class="form-control" value="<?php echo $servico->getServico();?>" id="servico" name="servico" required>
             </div>
 
-            <div class="form-group col-md-6">
+            <div class="col-md-6">
                 <label for="observacao">Observação</label>
                 <input type="text" class="form-control" value="<?php echo $servico->getObservacao();?>" id="observacao" name="observacao" required>
             </div>

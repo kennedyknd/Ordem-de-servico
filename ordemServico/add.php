@@ -30,7 +30,7 @@ if(!empty($_GET['id_ordemServico'])){
 ?>
     <head>
 
-        <title>Novo Cliente</title>
+        <title>Nova OS</title>
 
         <script>
 
@@ -52,33 +52,33 @@ if(!empty($_GET['id_ordemServico'])){
 
         <!-- area de campos do form -->
         <hr />
-        <div class="row">
-            <div class="form-group col-md-4">
-                <label for="id_cliente" class="control-label">Cliente</label>
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label for="id_cliente" class="control-label">Cliente - CPF</label>
 
                 <select name="id_cliente" id="id_cliente" class="form-control chosen">
                     <option>Selecione</option>
 
                     <?php foreach ($clientes as $cliente){
                         $checked = $cliente['id_cliente'] == $ordemServico->getIdCliente() ? 'selected' : '';
-                        echo "<option $checked value='{$cliente['id_cliente']}'>{$cliente['nome']}</option>";
+                        echo "<option $checked value='{$cliente['id_cliente']}'>{$cliente['nome']} CPF: {$cliente['cpf']}</option>";
                     } ?>
                 </select>
 
             </div>
 
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label for="custo">Custo</label>
-                <input type="number" class="form-control" value="<?php echo $ordemServico->getCusto();?>" id="custo" name="custo" required>
+                <input type="number" class="form-control" value="<?php echo $ordemServico->getCusto();?>" id="custo" name="custo" step=".01" required>
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label for="observacao">Observações</label>
                 <input type="text" class="form-control" value="<?php echo $ordemServico->getObservacao();?>" id="observacao" name="observacao" required>
             </div>
 
         </div>
-        <div class="row">
-            <div class="form-group col-md-4">
+        <div class="row form-group">
+            <div class="col-md-4">
                 <label for="id_servico" class="control-label">Serviço</label>
 
                 <select name="id_servico" id="id_servico" class="form-control chosen">
@@ -92,7 +92,7 @@ if(!empty($_GET['id_ordemServico'])){
 
             </div>
 
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label for="id_formaPagamento" class="control-label">Forma Pagamento</label>
 
                 <select name="id_formaPagamento" id="id_formaPagamento" class="form-control">
@@ -105,7 +105,7 @@ if(!empty($_GET['id_ordemServico'])){
                 </select>
 
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label for="id_metodoPagamento" class="control-label">Método Pagamento</label>
 
                 <select name="id_metodoPagamento" id="id_metodoPagamento" class="form-control">
@@ -121,8 +121,8 @@ if(!empty($_GET['id_ordemServico'])){
 
         </div>
 
-        <div class="row">
-            <div class="form-group col-md-4">
+        <div class="row form-group">
+            <div class="col-md-4">
                 <label for="id_situacao" class="control-label">Situação</label>
 
                 <select name="id_situacao" id="id_situacao" class="form-control">
@@ -135,6 +135,7 @@ if(!empty($_GET['id_ordemServico'])){
                 </select>
 
             </div>
+        </div>
 
         <div class="form-group">
             <div class="col-sm-12">
@@ -142,6 +143,7 @@ if(!empty($_GET['id_ordemServico'])){
                 <a class="btn btn-danger" href="index.php">Voltar</a>
             </div>
         </div>
+
     </form>
 
 <?php

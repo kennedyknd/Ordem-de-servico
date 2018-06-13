@@ -7,6 +7,12 @@ $formaPagamentos = $formaPagamento->recuperarDados();
 include_once '../cabecalho.php';
 ?>
 
+    <head>
+
+        <title>Forma de Pagamentos</title>
+
+    </head>
+
     <h1 class="text-center">Forma de Pagamento</h1>
     <br>
     <header>

@@ -7,6 +7,12 @@ $clientes = $cliente->recuperarDados();
 include_once '../cabecalho.php';
 ?>
 
+    <head>
+
+    <title>Visualizar Clientes</title>
+
+    </head>
+
     <h1 class="text-center">Clientes</h1>
     <br>
     <header>

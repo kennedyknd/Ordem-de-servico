@@ -7,6 +7,12 @@ $metodoPagamentos = $metodoPagamento->recuperarDados();
 include_once '../cabecalho.php';
 ?>
 
+    <head>
+
+        <title>Método de Pagamentos</title>
+
+    </head>
+
     <h1 class="text-center">Método de Pagamento</h1>
     <br>
     <header>

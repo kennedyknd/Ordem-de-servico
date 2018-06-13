@@ -13,7 +13,7 @@ if(!empty($_GET['id_metodoPagamento'])){
         <title>Novo Método de Pagamento</title>
     </head>
 
-<div class="container">
+<div>
 
     <h2>Novo Método de Pagamento</h2>
 
@@ -23,13 +23,13 @@ if(!empty($_GET['id_metodoPagamento'])){
 
         <!-- area de campos do form -->
         <hr />
-        <div class="row">
-            <div class="form-group col-md-6">
+        <div class="row form-group">
+            <div class="col-md-6">
                 <label for="tipo">Método de Pagamento</label>
                 <input type="text" class="form-control" value="<?php echo $metodoPagamento->getTipo();?>" id="tipo" name="tipo" required>
             </div>
 
-            <div class="form-group col-md-6">
+            <div class="col-md-6">
                 <label for="descricao">Descrição</label>
                 <input type="text" class="form-control" value="<?php echo $metodoPagamento->getDescricao();?>" id="descricao" name="descricao" required>
             </div>

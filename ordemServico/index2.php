@@ -7,17 +7,19 @@ include_once('../formaPagamento/FormaPagamento.php');
 include_once('../metodoPagamento/MetodoPagamento.php');
 
 $ordemServico = new OrdemServico();
-
 $ordemServicos = $ordemServico->recuperarDados();
+
+$cliente = new Cliente();
+$clientes = $cliente->recuperarDados();
+
+$servico = new Servico();
+$servicos= $servico->recuperarDados();
+
+$situacao = new Situacao();
+$situacoes = $situacao->recuperarDados();
 
 include_once '../cabecalho.php';
 ?>
-
-    <head>
-
-        <title>Ordem de serviços</title>
-
-    </head>
 
     <h1 class="text-center">Ordem de Serviços</h1>
     <br>
@@ -36,10 +38,10 @@ include_once '../cabecalho.php';
         <tr>
             <td>Ações</td>
             <td>Id</td>
-            <td>Cliente</td>
-            <td>Serviço</td>
             <td>Custo</td>
             <td>Observacoes</td>
+            <td>Cliente</td>
+            <td>Serviço</td>
             <td>Situação</td>
         </tr>
 
@@ -52,12 +54,8 @@ include_once '../cabecalho.php';
                     <a href='view.php?id_ordemServico={$ordemServico['id_ordemServico']}' class=\"btn btn-sm btn-info\">Visualizar</a>
                 </td>
                 <td>{$ordemServico['id_ordemServico']}</td>
-                <td>{$ordemServico['id_cliente']}</td>
-                <td>{$ordemServico['id_servico']}</td>
                 <td>{$ordemServico['custo']}</td>
                 <td>{$ordemServico['observacao']}</td>
-                <td>{$ordemServico['id_situacao']}</td>
-            </tr>
         ";
         } ?>
 
