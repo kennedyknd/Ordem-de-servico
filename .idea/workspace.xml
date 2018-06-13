@@ -3,20 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa50c7e-148f-45d1-bd14-0c4d126a3048" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cabecalho.php" beforeDir="false" afterPath="$PROJECT_DIR$/cabecalho.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cliente/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cliente/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cliente/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/cliente/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cliente/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cliente/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/formaPagamento/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/formaPagamento/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/formaPagamento/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/formaPagamento/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/metodoPagamento/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/metodoPagamento/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/metodoPagamento/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/metodoPagamento/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordemServico/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/ordemServico/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordemServico/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/ordemServico/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servico/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/servico/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servico/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/servico/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/situacao/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/situacao/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/situacao/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/situacao/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +13,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="add.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cabecalho.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cabecalho.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1650">
+              <caret line="110" column="25" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ordemServico/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="64" selection-end-column="24" />
+            <state relative-caret-position="135">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="10" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rodape.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rodape.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="14" selection-start-column="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -48,7 +52,7 @@
       <file leaf-file-name="add.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servico/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="225">
               <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
             </state>
           </provider>
@@ -63,20 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/metodoPagamento/add.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index2.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index2.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ordemServico/index2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="65" column="12" lean-forward="true" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
+            <state relative-caret-position="885">
+              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -84,7 +79,7 @@
       <file leaf-file-name="add.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/situacao/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="225">
               <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
             </state>
           </provider>
@@ -104,15 +99,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/formaPagamento/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -210,6 +196,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,43 +207,12 @@
             <path>
               <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
-              <item name="cliente" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
-              <item name="formaPagamento" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
-              <item name="metodoPagamento" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
               <item name="ordemServico" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
-              <item name="servico" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
-              <item name="situacao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -326,12 +282,16 @@
       <workItem from="1528551242594" duration="1284000" />
       <workItem from="1528553850235" duration="2054000" />
       <workItem from="1528891578040" duration="1486000" />
-      <workItem from="1528901047225" duration="1945000" />
+      <workItem from="1528901047225" duration="2623000" />
+      <workItem from="1528905677745" duration="32000" />
+      <workItem from="1528907140080" duration="12000" />
+      <workItem from="1528908419728" duration="16000" />
+      <workItem from="1528908476934" duration="610000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55186000" />
+    <option name="totallyTimeSpent" value="56534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
@@ -343,12 +303,12 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -512,13 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rodape.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ordemServico/processamento.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -576,13 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cabecalho.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="110" column="25" lean-forward="true" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cliente/add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -627,7 +573,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/servico/add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="225">
           <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
         </state>
       </provider>
@@ -641,7 +587,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/situacao/add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="225">
           <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
         </state>
       </provider>
@@ -660,17 +606,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ordemServico/add.php">
+    <entry file="file://$PROJECT_DIR$/ordemServico/index2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="64" selection-end-column="24" />
+        <state relative-caret-position="885">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ordemServico/index2.php">
+    <entry file="file://$PROJECT_DIR$/rodape.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="65" column="12" lean-forward="true" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cabecalho.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="110" column="25" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ordemServico/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="10" selection-end-column="39" />
         </state>
       </provider>
     </entry>
