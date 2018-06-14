@@ -97,16 +97,34 @@
                     </li>
 
                     <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Administração <span class="caret"></span></a>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Serviço <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="../servico/add.php">Novo Serviço</a></li>
                             <li><a href="../servico/index.php">Visualizar Serviços</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Forma Pagamento <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../formaPagamento/add.php">Nova Forma de Pagamento</a></li>
+                            <li><a href="../formaPagamento/index.php">Visualizar Forma de Pagamentos</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Método Pagamento <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../metodoPagamento/add.php">Novo Método de Pagamento</a></li>
+                            <li><a href="../metodoPagamento/index.php">Visualizar Método de Pagamentos</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Situação <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
                             <li><a href="../situacao/add.php">Nova Situação</a></li>
                             <li><a href="../situacao/index.php">Visualizar Situações</a></li>
-                            <li><a href="../metodoPagamento/add.php">Novo Método de Pagamento</a></li>
-                            <li><a href="../metodoPagamento/index.php">Visualizar Métodos de Pagamento</a></li>
-                            <li><a href="../formaPagamento/add.php">Nova Forma de Pagamento</a></li>
-                            <li><a href="../formaPagamento/index.php">Visualizar Formas de Pagamento</a></li>
                         </ul>
                     </li>
                 </ul>
