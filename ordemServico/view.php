@@ -45,6 +45,12 @@ if(!empty($_GET['id_ordemServico'])){
 
         <tr>
             <td><strong>ID Cliente: </strong> <?php echo $ordemServico->getIdCliente();?></td> <br/>
+            <td><strong>Custo: </strong>R$ <?php echo $ordemServico->getCusto();?></td> <br/>
+            <td><strong>Observações: </strong> <?php echo $ordemServico->getObservacao();?></td> <br/>
+            <td><strong>ID Serviço: </strong> <?php echo $ordemServico->getIdServico();?></td> <br/>
+            <td><strong>ID Forma de Pagamento: </strong> <?php echo $ordemServico->getIdFormaPagamento();?></td> <br/>
+            <td><strong>ID Método de Pagamento: </strong> <?php echo $ordemServico->getIdMetodoPagamento();?></td> <br/>
+            <td><strong>ID Situação: </strong> <?php echo $ordemServico->getIdSituacao();?></td> <br/>
         </tr>
 
     </div>

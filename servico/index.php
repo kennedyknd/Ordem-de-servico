@@ -37,7 +37,7 @@ include_once '../cabecalho.php';
         <?php foreach ($servicos as $servico){
             echo "
             <tr>
-                <td>
+                <td style='width: 120px'>
                     <a href='add.php?id_servico={$servico['id_servico']}' class=\"btn btn-sm btn-warning\">Editar</a>
                     <a href='processamento.php?acao=excluir&id_servico={$servico['id_servico']}' class=\"btn btn-sm btn-danger\">Excluir</a>
                 </td>

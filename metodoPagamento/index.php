@@ -37,7 +37,7 @@ include_once '../cabecalho.php';
         <?php foreach ($metodoPagamentos as $metodoPagamento){
             echo "
             <tr>
-                <td>
+                <td style='width: 120px'>
                     <a href='add.php?id_metodoPagamento={$metodoPagamento['id_metodoPagamento']}' class=\"btn btn-sm btn-warning\">Editar</a>
                     <a href='processamento.php?acao=excluir&id_metodoPagamento={$metodoPagamento['id_metodoPagamento']}' class=\"btn btn-sm btn-danger\">Excluir</a>
                 </td>
