@@ -184,6 +184,14 @@ class OrdemServico
         return $conexao->recuperarDados($sql);
     }
 
+    public function recuperarDadosJoin()
+    {
+        $conexao = new Conexao();
+
+        $sql = "select O.id_ordemServico, O.custo, O.observacao, C.nome, S.servico, F.tipo as forma, M.tipo as metodo, A.situacao from ordemServico as O inner join cliente as C on O.id_cliente = C.id_cliente inner join servico as S on O.id_servico = S.id_servico inner join formaPagamento as F on O.id_formaPagamento = F.id_formaPagamento inner join metodoPagamento as M on O.id_metodoPagamento = M.id_metodoPagamento inner join situacao as A on O.id_situacao = A.id_situacao;";
+        return $conexao->recuperarDados($sql);
+    }
+
     public function carregarPorId($id_ordemServico)
     {
         $conexao = new Conexao();

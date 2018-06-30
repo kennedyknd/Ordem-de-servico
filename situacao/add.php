@@ -10,12 +10,12 @@ if(!empty($_GET['id_situacao'])){
 ?>
 
     <head>
-        <title>Nova Situação</title>
+        <title>Situação</title>
     </head>
 
 <div>
 
-    <h2>Nova Situação</h2>
+    <h2>Situação</h2>
 
     <form class="form-horizontal" method="post" action="processamento.php?acao=salvar">
 

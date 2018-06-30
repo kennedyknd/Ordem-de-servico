@@ -30,7 +30,7 @@ if(!empty($_GET['id_ordemServico'])){
 ?>
     <head>
 
-        <title>Nova OS</title>
+        <title>Ordem de Serviço</title>
 
         <script>
 
@@ -44,7 +44,7 @@ if(!empty($_GET['id_ordemServico'])){
 
     </head>
 
-    <h2>Nova Ordem de Serviço</h2>
+    <h2>Ordem de Serviço</h2>
 
     <form class="form-horizontal" method="post" action="processamento.php?acao=salvar">
 

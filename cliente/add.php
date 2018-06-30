@@ -10,7 +10,7 @@ if(!empty($_GET['id_cliente'])){
 ?>
     <head>
 
-        <title>Novo Cliente</title>
+        <title>Cliente</title>
 
         <script>
 
@@ -99,7 +99,7 @@ if(!empty($_GET['id_cliente'])){
 
     <div>
 
-    <h2>Novo Cliente</h2>
+    <h2>Cliente</h2>
 
     <form class="form-horizontal" method="post" action="processamento.php?acao=salvar">
 

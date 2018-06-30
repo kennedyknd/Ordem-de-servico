@@ -37,7 +37,7 @@ include_once '../cabecalho.php';
         <?php foreach ($formaPagamentos as $formaPagamento){
             echo "
             <tr>
-                <td style='width: 120px'>
+                <td style='width: 130px'>
                     <a href='add.php?id_formaPagamento={$formaPagamento['id_formaPagamento']}' class=\"btn btn-sm btn-warning\">Editar</a>
                     <a href='processamento.php?acao=excluir&id_formaPagamento={$formaPagamento['id_formaPagamento']}' class=\"btn btn-sm btn-danger\">Excluir</a>
                 </td>

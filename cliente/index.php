@@ -40,7 +40,7 @@ include_once '../cabecalho.php';
         <?php foreach ($clientes as $cliente){
             echo "
             <tr>
-                <td style='width: 200px'>
+                <td style='width: 220px'>
                     <a href='add.php?id_cliente={$cliente['id_cliente']}' class=\"btn btn-sm btn-warning\">Editar</a>
                     <a href='processamento.php?acao=excluir&id_cliente={$cliente['id_cliente']}' class=\"btn btn-sm btn-danger\">Excluir</a>
                     <a href='view.php?id_cliente={$cliente['id_cliente']}' class=\"btn btn-sm btn-info\">Visualizar</a>

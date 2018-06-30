@@ -10,12 +10,12 @@ if(!empty($_GET['id_formaPagamento'])){
 ?>
 
     <head>
-        <title>Nova Forma de Pagamento</title>
+        <title>Forma de Pagamento</title>
     </head>
 
 <div>
 
-    <h2>Nova Forma de Pagamento</h2>
+    <h2>Forma de Pagamento</h2>
 
     <form class="form-horizontal" method="post" action="processamento.php?acao=salvar">
 
