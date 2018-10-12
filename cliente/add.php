@@ -17,87 +17,71 @@ if(!empty($_GET['id_cliente'])){
             $(function () {
                 $('#telefone').mask('(99) 9999-9999');
                 $('#celular').mask('(99) 99999-9999');
-                $('#cep').mask('99.999-999');
+                // $('#cep').mask('99.999-999');
                 $('#cpf').mask('999.999.999-99');
             })
         </script>
 
-        <!-- Adicionando Javascript -->
-        <script type="text/javascript" >
+        <script>
+            $(function(){
+                $('#cep').change(function(){
+                    $cep = $('#cep').val();
 
-            function limpa_formulário_cep() {
-                //Limpa valores do formulário de cep.
-                document.getElementById('logradouro').value=("");
-                document.getElementById('bairro').value=("");
-                document.getElementById('cidade').value=("");
-                document.getElementById('uf').value=("");
-                document.getElementById('ibge').value=("");
-            }
+                    //FALTA PODER HABILITAR MASCARA AQUI!!
 
-            function meu_callback(conteudo) {
-                if (!("erro" in conteudo)) {
-                    //Atualiza os campos com os valores.
-                    document.getElementById('logradouro').value=(conteudo.logradouro);
-                    document.getElementById('bairro').value=(conteudo.bairro);
-                    document.getElementById('cidade').value=(conteudo.localidade);
-                    document.getElementById('uf').value=(conteudo.uf);
-                    document.getElementById('ibge').value=(conteudo.ibge);
-                } //end if.
-                else {
-                    //CEP não Encontrado.
-                    limpa_formulário_cep();
-                    alert("CEP não encontrado.");
-                }
-            }
+                    $.ajax({
+                        url: 'https://viacep.com.br/ws/' + $cep +'/json/',
+                        success: function (dados) {
+                            $('#logradouro').val(dados.logradouro)
+                            $('#bairro').val(dados.bairro)
+                            $('#uf').val(dados.uf)
+                            $('#localidade').val(dados.localidade)
+                        }
+                    });
 
-            function pesquisacep(valor) {
+                });
 
-                //Nova variável "cep" somente com dígitos.
-                var cep = valor.replace(/\D/g, '');
+                $('#cpf').change(function() {
+                    $cpf = $('#cpf').val();
+                    $.ajax({
+                        url: 'processamento.php?acao=verificar_cpf&cpf='+$cpf,
+                        success: function (dados) {
+                            if (dados){
+                                // alert(dados);
+                                $('#mensagemCpf').html(dados);
+                                $('#cpf').val(' ');
+                            }
+                        }
+                    });
+                })
 
-                //Verifica se campo cep possui valor informado.
-                if (cep != "") {
+                $('#rg').change(function() {
+                    $rg = $('#rg').val();
+                    $.ajax({
+                        url: 'processamento.php?acao=verificar_rg&rg='+$rg,
+                        success: function (dados) {
+                            if (dados){
+                                // alert(dados);
+                                $('#mensagemRg').html(dados);
+                                $('#rg').val(' ');
+                            }
+                        }
+                    });
+                });
 
-                    //Expressão regular para validar o CEP.
-                    var validacep = /^[0-9]{8}$/;
-
-                    //Valida o formato do CEP.
-                    if(validacep.test(cep)) {
-
-                        //Preenche os campos com "..." enquanto consulta webservice.
-                        document.getElementById('logradouro').value="...";
-                        document.getElementById('bairro').value="...";
-                        document.getElementById('cidade').value="...";
-                        document.getElementById('uf').value="...";
-                        document.getElementById('ibge').value="...";
-
-                        //Cria um elemento javascript.
-                        var script = document.createElement('script');
-
-                        //Sincroniza com o callback.
-                        script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
-
-                        //Insere script no documento e carrega o conteúdo.
-                        document.body.appendChild(script);
-
-                    } //end if.
-                    else {
-                        //cep é inválido.
-                        limpa_formulário_cep();
-                        alert("Formato de CEP inválido.");
-                    }
-                } //end if.
-                else {
-                    //cep sem valor, limpa formulário.
-                    limpa_formulário_cep();
-                }
-            };
-
+            })
         </script>
 
     </head>
 
     <div>
+
+        <div id="mensagemCpf">
+
+        </div>
+        <div id="mensagemRg">
+
+        </div>
 
     <h2>Cliente</h2>
 
@@ -180,16 +164,12 @@ if(!empty($_GET['id_cliente'])){
 
         <div class="row form-group">
             <div class="col-md-4">
-                <label for="cidade">Cidade</label>
-                <input type="text" class="form-control" value="<?php echo $cliente->getCidade();?>" id="cidade" name="cidade" readonly>
+                <label for="localidade">Localidade</label>
+                <input type="text" class="form-control" value="<?php echo $cliente->getLocalidade();?>" id="localidade" name="localidade" readonly>
             </div>
             <div class="col-md-4">
                 <label for="uf">UF</label>
                 <input type="text" class="form-control" value="<?php echo $cliente->getUf();?>" id="uf" name="uf" readonly>
-            </div>
-            <div class="col-md-4">
-                <label for="ibge">IBGE</label>
-                <input type="text" class="form-control" id="ibge" name="" readonly>
             </div>
 
         </div>
@@ -208,7 +188,7 @@ if(!empty($_GET['id_cliente'])){
 
         <div class="form-group">
             <div class="col-sm-12">
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" name="submit" id="submit" class="btn btn-primary">Cadastrar</button>
                 <a class="btn btn-danger" href="index.php">Voltar</a>
             </div>
         </div>

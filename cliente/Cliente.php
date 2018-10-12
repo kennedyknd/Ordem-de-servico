@@ -16,7 +16,7 @@ class Cliente
     protected $cep;
     protected $logradouro;
     protected $bairro;
-    protected $cidade;
+    protected $localidade;
     protected $uf;
     protected $numero;
     protected $complemento;
@@ -218,17 +218,17 @@ class Cliente
     /**
      * @return mixed
      */
-    public function getCidade()
+    public function getLocalidade()
     {
-        return $this->cidade;
+        return $this->localidade;
     }
 
     /**
-     * @param mixed $cidade
+     * @param mixed $localidade
      */
-    public function setCidade($cidade)
+    public function setLocalidade($localidade)
     {
-        $this->cidade = $cidade;
+        $this->localidade = $localidade;
     }
 
     /**
@@ -338,7 +338,7 @@ class Cliente
         $this->cep = $dados[0]['cep'];
         $this->logradouro = $dados[0]['logradouro'];
         $this->bairro = $dados[0]['bairro'];
-        $this->cidade = $dados[0]['cidade'];
+        $this->localidade = $dados[0]['localidade'];
         $this->uf = $dados[0]['uf'];
         $this->numero = $dados[0]['numero'];
         $this->complemento = $dados[0]['complemento'];
@@ -359,13 +359,13 @@ class Cliente
         $cep = $dados['cep'];
         $logradouro = $dados['logradouro'];
         $bairro = $dados['bairro'];
-        $cidade = $dados['cidade'];
+        $localidade = $dados['localidade'];
         $uf = $dados['uf'];
         $numero = $dados['numero'];
         $complemento = $dados['complemento'];
 
-        $sql = "INSERT INTO cliente (nome, datanasci, email, cpf, telefone, celular, rg, sexo, cep, logradouro, bairro, cidade, uf, numero, complemento)";
-        $sql .= " VALUES ('$nome','$datanasci','$email','$cpf','$telefone','$celular','$rg','$sexo','$cep','$logradouro','$bairro','$cidade','$uf','$numero','$complemento')";
+        $sql = "INSERT INTO cliente (nome, datanasci, email, cpf, telefone, celular, rg, sexo, cep, logradouro, bairro, localidade, uf, numero, complemento)";
+        $sql .= " VALUES ('$nome','$datanasci','$email','$cpf','$telefone','$celular','$rg','$sexo','$cep','$logradouro','$bairro','$localidade','$uf','$numero','$complemento')";
 
         return $conexao->executar($sql);
     }
@@ -387,12 +387,12 @@ class Cliente
         $cep = $dados['cep'];
         $logradouro = $dados['logradouro'];
         $bairro = $dados['bairro'];
-        $cidade = $dados['cidade'];
+        $localidade = $dados['localidade'];
         $uf = $dados['uf'];
         $numero = $dados['numero'];
         $complemento = $dados['complemento'];
 
-        $sql = "UPDATE cliente SET nome = '$nome', datanasci = '$datanasci', email = '$email', cpf = '$cpf', telefone = '$telefone', celular = '$celular', rg = '$rg', sexo = '$sexo', cep = '$cep', logradouro = '$logradouro', bairro = '$bairro', cidade = '$cidade', uf = '$uf', numero = '$numero', complemento = '$complemento' WHERE id_cliente = $id_cliente";
+        $sql = "UPDATE cliente SET nome = '$nome', datanasci = '$datanasci', email = '$email', cpf = '$cpf', telefone = '$telefone', celular = '$celular', rg = '$rg', sexo = '$sexo', cep = '$cep', logradouro = '$logradouro', bairro = '$bairro', localidade = '$localidade', uf = '$uf', numero = '$numero', complemento = '$complemento' WHERE id_cliente = $id_cliente";
 
         return $conexao->executar($sql);
     }
@@ -406,5 +406,27 @@ class Cliente
 
 
         return $conexao->executar($sql);
+    }
+
+    public function existeCpf($cpf)
+    {
+        $conexao = new Conexao();
+
+//        $sql = "SELECT COUNT(*) qtd FROM cliente WHERE cpf ='$cpf';";
+        $sql = "SELECT nome, telefone, email, COUNT(*) qtd FROM cliente WHERE cpf ='$cpf'";
+        $dados = $conexao->recuperarDados($sql);
+
+        return $dados;
+    }
+
+    public function existeRg($rg)
+    {
+        $conexao = new Conexao();
+
+//        $sql = "SELECT COUNT(*) qtd FROM cliente WHERE rg ='$rg';";
+        $sql = "SELECT nome, telefone, email, COUNT(*) qtd FROM cliente WHERE rg ='$rg'";
+        $dados = $conexao->recuperarDados($sql);
+
+        return $dados;
     }
 }

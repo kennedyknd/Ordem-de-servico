@@ -29,7 +29,7 @@ if(!empty($_GET['id_cliente'])){
                 //Limpa valores do formulário de cep.
                 document.getElementById('logradouro').value=("");
                 document.getElementById('bairro').value=("");
-                document.getElementById('cidade').value=("");
+                document.getElementById('localidade').value=("");
                 document.getElementById('uf').value=("");
                 document.getElementById('ibge').value=("");
             }
@@ -39,7 +39,7 @@ if(!empty($_GET['id_cliente'])){
                     //Atualiza os campos com os valores.
                     document.getElementById('logradouro').value=(conteudo.logradouro);
                     document.getElementById('bairro').value=(conteudo.bairro);
-                    document.getElementById('cidade').value=(conteudo.localidade);
+                    document.getElementById('localidade').value=(conteudo.localidade);
                     document.getElementById('uf').value=(conteudo.uf);
                     document.getElementById('ibge').value=(conteudo.ibge);
                 } //end if.
@@ -67,7 +67,7 @@ if(!empty($_GET['id_cliente'])){
                         //Preenche os campos com "..." enquanto consulta webservice.
                         document.getElementById('logradouro').value="...";
                         document.getElementById('bairro').value="...";
-                        document.getElementById('cidade').value="...";
+                        document.getElementById('localidade').value="...";
                         document.getElementById('uf').value="...";
                         document.getElementById('ibge').value="...";
 
@@ -120,7 +120,7 @@ if(!empty($_GET['id_cliente'])){
             <td><strong>CEP: </strong> <?php echo $cliente->getCep();?></td> <br/>
             <td><strong>Logradouro: </strong> <?php echo $cliente->getLogradouro();?></td> <br/>
             <td><strong>Bairro: </strong> <?php echo $cliente->getBairro();?></td> <br/>
-            <td><strong>Cidade: </strong> <?php echo $cliente->getCidade();?></td> <br/>
+            <td><strong>Localidade: </strong> <?php echo $cliente->getLocalidade();?></td> <br/>
             <td><strong>UF: </strong> <?php echo $cliente->getUf();?></td> <br/>
             <td><strong>Número: </strong> <?php echo $cliente->getNumero();?></td> <br/>
             <td><strong>Complemento: </strong> <?php echo $cliente->getComplemento();?></td> <br/>

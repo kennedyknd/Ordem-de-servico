@@ -33,7 +33,7 @@ include_once '../cabecalho.php';
             <td>Nome</td>
             <td>CPF</td>
             <td>Telefone</td>
-            <td>Cidade</td>
+            <td>Localidade</td>
             <td>UF</td>
         </tr>
 
@@ -49,7 +49,7 @@ include_once '../cabecalho.php';
                 <td>{$cliente['nome']}</td>
                 <td>{$cliente['cpf']}</td>
                 <td>{$cliente['telefone']}</td>
-                <td>{$cliente['cidade']}</td>
+                <td>{$cliente['localidade']}</td>
                 <td>{$cliente['uf']}</td>
             </tr>
         ";
