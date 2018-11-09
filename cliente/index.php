@@ -51,6 +51,7 @@ include_once '../cabecalho.php';
                 <td>{$cliente['telefone']}</td>
                 <td>{$cliente['localidade']}</td>
                 <td>{$cliente['uf']}</td>
+                <td>{$cliente['foto']}</td>
             </tr>
         ";
         } ?>

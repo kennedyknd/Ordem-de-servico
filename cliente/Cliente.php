@@ -20,6 +20,7 @@ class Cliente
     protected $uf;
     protected $numero;
     protected $complemento;
+    protected $foto;
     protected $criado;
     protected $modificado;
 
@@ -311,6 +312,25 @@ class Cliente
         $this->modificado = $modificado;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getFoto()
+    {
+        return $this->foto;
+    }
+
+    /**
+     * @param mixed $foto
+     */
+    public function setFoto($foto)
+    {
+        $this->foto = $foto;
+    }
+
+
+
+
     public function recuperarDados()
     {
         $conexao = new Conexao();
@@ -363,11 +383,23 @@ class Cliente
         $uf = $dados['uf'];
         $numero = $dados['numero'];
         $complemento = $dados['complemento'];
+        $foto = $_FILES['foto']['name'];
+        $this->uploadFoto();
 
-        $sql = "INSERT INTO cliente (nome, datanasci, email, cpf, telefone, celular, rg, sexo, cep, logradouro, bairro, localidade, uf, numero, complemento)";
-        $sql .= " VALUES ('$nome','$datanasci','$email','$cpf','$telefone','$celular','$rg','$sexo','$cep','$logradouro','$bairro','$localidade','$uf','$numero','$complemento')";
+        $sql = "INSERT INTO cliente (nome, datanasci, email, cpf, telefone, celular, rg, sexo, cep, logradouro, bairro, localidade, uf, numero, complemento, foto)";
+        $sql .= " VALUES ('$nome','$datanasci','$email','$cpf','$telefone','$celular','$rg','$sexo','$cep','$logradouro','$bairro','$localidade','$uf','$numero','$complemento','$foto')";
 
         return $conexao->executar($sql);
+    }
+
+    public function uploadFoto(){
+
+        if ($_FILES['foto']['error'] == UPLOAD_ERR_OK)
+        {
+            $origem = $_FILES['foto']['tmp_name'];
+            $destino = '../upload/produto' . $_FILES['foto']['name'];
+            move_uploaded_file($origem, $destino);
+        }
     }
 
     public function alterar($dados)

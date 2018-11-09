@@ -85,7 +85,7 @@ if(!empty($_GET['id_cliente'])){
 
     <h2>Cliente</h2>
 
-    <form class="form-horizontal" method="post" action="processamento.php?acao=salvar">
+        <form enctype="multipart/form-data" class="form-horizontal" method="post" action="processamento.php?acao=salvar">
 
         <input type="hidden" name="id_cliente" class="form-control" value="<?php echo $cliente->getIdCliente();?>">
 
@@ -183,9 +183,18 @@ if(!empty($_GET['id_cliente'])){
                 <label for="complemento">Complemento</label>
                 <input type="text" class="form-control" value="<?php echo $cliente->getComplemento();?>" id="complemento" name="complemento" required>
             </div>
-
         </div>
+            <br/>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <div class="col-md-12">
+                        <label>Inserir Imagem</label>
+                        <input type="file" class="form-text" id="foto" name="foto" value="<?php echo $cliente->getFoto(); ?>">
+                    </div>
+                </div>
 
+            </div>
+        <br/>
         <div class="form-group">
             <div class="col-sm-12">
                 <button type="submit" name="submit" id="submit" class="btn btn-primary">Cadastrar</button>
