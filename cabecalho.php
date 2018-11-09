@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+include_once '../usuario/Usuario.php';
+
+$possuiAcesso = (new Usuario())->possuiAcesso();
+
+if (!$possuiAcesso) {
+    header('location: ../usuario/login.php');
+}
+
+?>
+
+
 <html>
 <head>
 
@@ -52,6 +66,8 @@
     </style>
 
 </head>
+
+<?php if (!empty($_SESSION['usuario'])) { ?>
 
 <!-- Fixed navbar -->
 <body>
@@ -127,7 +143,15 @@
                             <li><a href="../situacao/index.php">Visualizar Situações</a></li>
                         </ul>
                     </li>
+
+                    <li>
+                        <ul class="nav navbar-nav navbar-right user-nav">
+                            <li class="user-name"><span><?= $_SESSION['usuario']['nome']; ?></span></li>
+                            <li><a title="Sair" href="../usuario/processamento.php?acao=deslogar" class="opener-right-menu"><span class="fa fa-sign-out"></span></a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+<?php } ?>

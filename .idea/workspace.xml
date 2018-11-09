@@ -4,10 +4,6 @@
     <list default="true" id="0fa50c7e-148f-45d1-bd14-0c4d126a3048" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cabecalho.php" beforeDir="false" afterPath="$PROJECT_DIR$/cabecalho.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cliente/Cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/cliente/Cliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cliente/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cliente/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cliente/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/cliente/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cliente/processamento.php" beforeDir="false" afterPath="$PROJECT_DIR$/cliente/processamento.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,52 +15,67 @@
     <session id="457473971">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.48" value="2" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="9" />
+          <entry key="php" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="9" />
+          <entry key="PHP" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="789" />
+          <entry key="php" value="899" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="789" />
+          <entry key="PHP" value="899" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cliente/add.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cabecalho.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="101" column="126" lean-forward="true" selection-start-line="101" selection-start-column="126" selection-end-line="101" selection-end-column="126" />
+            <state relative-caret-position="507">
+              <caret line="152" column="21" selection-start-line="152" selection-start-column="21" selection-end-line="152" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/usuario/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+              <folding>
+                <element signature="e#1401#1428#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Conexao.php">
+        <entry file="file://$PROJECT_DIR$/rodape.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="67" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
+            <state>
+              <caret column="14" selection-start-column="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -72,17 +83,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cliente/Cliente.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6749">
-              <caret line="397" column="9" lean-forward="true" selection-start-line="397" selection-start-column="9" selection-end-line="397" selection-end-column="9" />
+            <state relative-caret-position="402">
+              <caret line="401" column="9" selection-start-line="401" selection-start-column="9" selection-end-line="401" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cliente/index.php">
+        <entry file="file://$PROJECT_DIR$/usuario/Usuario.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+            <state relative-caret-position="1496">
+              <caret line="205" selection-start-line="205" selection-end-line="205" />
             </state>
           </provider>
         </entry>
@@ -90,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cliente/processamento.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+            <state relative-caret-position="204">
+              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -157,6 +168,7 @@
       <find>titulo</find>
       <find>eleitor</find>
       <find>cpf</find>
+      <find>URL</find>
     </findStrings>
     <replaceStrings>
       <replace>cep</replace>
@@ -199,7 +211,6 @@
         <option value="$PROJECT_DIR$/ordemServico/index2.php" />
         <option value="$PROJECT_DIR$/ordemServico/view.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/cabecalho.php" />
         <option value="$PROJECT_DIR$/ordemServico/index.php" />
         <option value="$PROJECT_DIR$/servico/index.php" />
         <option value="$PROJECT_DIR$/formaPagamento/index.php" />
@@ -210,6 +221,9 @@
         <option value="$PROJECT_DIR$/cliente/processamento.php" />
         <option value="$PROJECT_DIR$/cliente/add.php" />
         <option value="$PROJECT_DIR$/cliente/index.php" />
+        <option value="$PROJECT_DIR$/usuario/Usuario.php" />
+        <option value="$PROJECT_DIR$/cabecalho.php" />
+        <option value="$PROJECT_DIR$/usuario/login.php" />
       </list>
     </option>
   </component>
@@ -222,9 +236,8 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1366" />
-    <option name="y" value="-20" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="745" />
   </component>
@@ -233,7 +246,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,53 +261,18 @@
             <path>
               <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
-              <item name="cliente" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
-              <item name="formaPagamento" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
-              <item name="metodoPagamento" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
-              <item name="ordemServico" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
-              <item name="servico" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
-              <item name="situacao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ordem-de-servico" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ordem-de-servico" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
-              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="usuario" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iesb-eleicoes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iesb-eleicoes2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -374,16 +351,20 @@
       <workItem from="1541707621783" duration="2777000" />
       <workItem from="1541713227309" duration="3188000" />
       <workItem from="1541774463724" duration="797000" />
+      <workItem from="1541775606646" duration="1110000" />
+      <workItem from="1541799248820" duration="310000" />
+      <workItem from="1541802642420" duration="1742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74133000" />
+    <option name="totallyTimeSpent" value="77295000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1376" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18237083" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1913767" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -486,24 +467,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ordemServico/index2.php" />
-    <entry file="file://$PROJECT_DIR$/rodape.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Banco de dados/crudOrdem2.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cabecalho.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2244">
-          <caret line="132" column="10" selection-start-line="132" selection-start-column="10" selection-end-line="132" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -549,11 +516,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usuario/login.php" />
     <entry file="file://$PROJECT_DIR$/cliente/add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="101" column="126" lean-forward="true" selection-start-line="101" selection-start-column="126" selection-end-line="101" selection-end-column="126" />
+        <state relative-caret-position="3162">
+          <caret line="186" column="12" selection-start-line="186" selection-start-column="12" selection-end-line="195" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -564,24 +530,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cliente/Cliente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6749">
-          <caret line="397" column="9" lean-forward="true" selection-start-line="397" selection-start-column="9" selection-end-line="397" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cliente/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
-          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cliente/processamento.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        <state relative-caret-position="204">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -610,6 +569,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cliente/Cliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="401" column="9" selection-start-line="401" selection-start-column="9" selection-end-line="401" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rodape.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usuario/Usuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="205" selection-start-line="205" selection-end-line="205" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cabecalho.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="152" column="21" selection-start-line="152" selection-start-column="21" selection-end-line="152" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usuario/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+          <folding>
+            <element signature="e#1401#1428#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
