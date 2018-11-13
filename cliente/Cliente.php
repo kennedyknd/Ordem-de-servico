@@ -423,8 +423,10 @@ class Cliente
         $uf = $dados['uf'];
         $numero = $dados['numero'];
         $complemento = $dados['complemento'];
+        $foto = $_FILES['foto']['name'];
+        $this->uploadFoto();
 
-        $sql = "UPDATE cliente SET nome = '$nome', datanasci = '$datanasci', email = '$email', cpf = '$cpf', telefone = '$telefone', celular = '$celular', rg = '$rg', sexo = '$sexo', cep = '$cep', logradouro = '$logradouro', bairro = '$bairro', localidade = '$localidade', uf = '$uf', numero = '$numero', complemento = '$complemento' WHERE id_cliente = $id_cliente";
+        $sql = "UPDATE cliente SET nome = '$nome', datanasci = '$datanasci', email = '$email', cpf = '$cpf', telefone = '$telefone', celular = '$celular', rg = '$rg', sexo = '$sexo', cep = '$cep', logradouro = '$logradouro', bairro = '$bairro', localidade = '$localidade', uf = '$uf', numero = '$numero', complemento = '$complemento', foto = '$foto' WHERE id_cliente = $id_cliente";
 
         return $conexao->executar($sql);
     }
