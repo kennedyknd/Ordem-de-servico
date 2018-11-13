@@ -1,9 +1,8 @@
 <?php
-include_once 'Usuario.php';
+include_once '../usuario/Usuario.php';
 
 $usuario = new Usuario();
 $aUsuario = $usuario->recuperarDados();
- // print_r($aUsuario);die;
 
 include_once '../cabecalho.php';
 ?>
@@ -39,13 +38,13 @@ include_once '../cabecalho.php';
                             <?php foreach ($aUsuario as $usuario) { ?>
                                 <tr>
                                     <td>
-                                        <a href="formulario.php?id_usuario=<?= $usuario['id_usuario'] ?>">
-                                            <span class="icons icon-note"></span>
+                                        <a href="formulario.php?id_usuario=<?= $usuario['id_usuario'] ?>" class="btn btn-sm btn-info">
+                                            Alterar
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="processamento.php?acao=excluir&id_usuario=<?= $usuario['id_usuario'] ?>">
-                                            <span class="fa fa-trash-o"></span>
+                                        <a href="processamento.php?acao=excluir&id_usuario=<?= $usuario['id_usuario'] ?>" class="btn btn-sm btn-danger">
+                                            Excluir
                                         </a>
                                     </td>
                                     <td><?= $usuario['nome'] ?></td>
@@ -61,6 +60,31 @@ include_once '../cabecalho.php';
             </div>
         </div>
     </div>
+<!---->
+<!--<!-- Button trigger modal -->-->
+<!--    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">-->
+<!--        Usuario-->
+<!--    </button>-->
+<!---->
+<!--    <!-- Modal -->-->
+<!--    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+<!--        <div class="modal-dialog" role="document">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+<!--                    <h4 class="modal-title" id="myModalLabel">Usuario</h4>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                    06/11/2018-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+<!--                    <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
 <?php
 include_once '../rodape.php';
+

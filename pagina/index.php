@@ -38,13 +38,13 @@ include_once '../cabecalho.php';
                             <?php foreach ($aPagina as $pagina) { ?>
                                 <tr>
                                     <td>
-                                        <a href="formulario.php?id_pagina=<?= $pagina['id_pagina'] ?>">
-                                            <span class="icons icon-note"></span>
+                                        <a href="formulario.php?id_pagina=<?= $pagina['id_pagina'] ?>" class="btn btn-sm btn-info">
+                                            Editar
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="processamento.php?acao=excluir&id_pagina=<?= $pagina['id_pagina'] ?>">
-                                            <span class="fa fa-trash-o"></span>
+                                        <a href="processamento.php?acao=excluir&id_pagina=<?= $pagina['id_pagina'] ?>" class="btn btn-sm btn-danger">
+                                            Excluir
                                         </a>
                                     </td>
                                     <td><?= $pagina['nome'] ?></td>

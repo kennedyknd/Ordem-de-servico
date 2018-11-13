@@ -1,77 +1,76 @@
 <?php
-
 session_start();
 include_once '../usuario/Usuario.php';
 
 $possuiAcesso = (new Usuario())->possuiAcesso();
 
-if (!$possuiAcesso) {
+if(!$possuiAcesso){
     header('location: ../usuario/login.php');
 }
 
 ?>
 
+    <html>
+    <head>
 
-<html>
-<head>
+        <link rel="stylesheet" href="../js/bootstrap/css/bootstrap.css"/>
+        <link rel="stylesheet" href="../js/chosen/chosen.css"/>
+        <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="../js/jquery.maskedinput.js"></script>
+        <script type="text/javascript" src="../js/sweetalert2.all.js"></script>
+        <script src="../js/bootstrap/js/bootstrap.min.js"></script>
+        <!--    <script src="boostrap/js/main.js"></script>-->
+        <script type="text/javascript" src="../js/chosen/chosen.jquery.js"></script>
 
-    <link rel="stylesheet" href="../js/bootstrap/css/bootstrap.css"/>
-    <link rel="stylesheet" href="../js/chosen/chosen.css"/>
-    <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="../js/jquery.maskedinput.js"></script>
-    <script type="text/javascript" src="../js/sweetalert2.all.js"></script>
-    <script src="../js/bootstrap/js/bootstrap.min.js"></script>
-    <!--    <script src="boostrap/js/main.js"></script>-->
-    <script type="text/javascript" src="../js/chosen/chosen.jquery.js"></script>
+        <script>
+            $(function(){
+                $('.chosen').chosen();
+            })
+        </script>
 
-    <script>
-        $(function(){
-            $('.chosen').chosen();
-        })
-    </script>
-
-    <style>
-        .cabecalho {
-            height: 100px;
-        }
-        .img1 {
-            float: left;
-        }
-        .contato {
-            height: 10em;
-            position: relative }
-        .contato p {
-            margin: 0;
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%)
-        }
-        p {
-            font-weight: bold;
-        }
-        /*.direita {*/
+        <style>
+            .cabecalho {
+                height: 100px;
+            }
+            .img1 {
+                float: left;
+            }
+            .contato {
+                height: 10em;
+                position: relative }
+            .contato p {
+                margin: 0;
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, -50%)
+            }
+            p {
+                font-weight: bold;
+            }
+            /*.direita {*/
             /*float: right;*/
-        /*}*/
-        .texto1 p{
-            padding-left: 40px;
-        }
-        .texto2 p{
-            padding-right: 40px;
-        }
-        .modal-footer p{
-            font-weight: normal !important;
-        }
-    </style>
+            /*}*/
+            .texto1 p{
+                padding-left: 40px;
+            }
+            .texto2 p{
+                padding-right: 40px;
+            }
+            .modal-footer p{
+                font-weight: normal !important;
+            }
+        </style>
 
-</head>
+    </head>
 
-<?php if (!empty($_SESSION['usuario'])) { ?>
-
-<!-- Fixed navbar -->
 <body>
-<div id="main" class="container">
+
+<?php if(!empty($_SESSION['usuario'])){ ?>
+
+<!-- start: Header -->
+    <div id="main" class="container">
     <header class="cabecalho">
         <div class="img1">
             <img src="../imagens/ks.png" width="300" height="90"/>
@@ -154,4 +153,5 @@ if (!$possuiAcesso) {
             </div>
         </div>
     </nav>
+
 <?php } ?>

@@ -4,11 +4,8 @@ include_once '../Conexao.php';
 
 class Perfil
 {
-
-    const PERFIL_ADMINISTRADOR = 1;
-    const PERFIL_MESARIO = 2;
-    const PERFIL_CHEFE = 3;
-    const PERFIL_ELEITOR = 4;
+    const PERFIL_ADMINISTRADOR = 2;
+    const PERFIL_ATENDENTE = 3;
 
     protected $id_perfil;
     protected $nome;

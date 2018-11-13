@@ -16,6 +16,8 @@ class Pagina
     public function getIdPagina()
     {
         return $this->id_pagina;
+        
+        echo '<pre>'; print_r($this->id_pagina); die;
     }
 
     /**

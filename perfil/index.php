@@ -36,13 +36,13 @@ include_once '../cabecalho.php';
                             <?php foreach ($aPerfil as $perfil) { ?>
                                 <tr>
                                     <td>
-                                        <a href="formulario.php?id_perfil=<?= $perfil['id_perfil'] ?>">
-                                            <span class="icons icon-note"></span>
+                                        <a href="formulario.php?id_perfil=<?= $perfil['id_perfil'] ?>" class="btn btn-sm btn-info">
+                                            Editar
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="processamento.php?acao=excluir&id_perfil=<?= $perfil['id_perfil'] ?>">
-                                            <span class="fa fa-trash-o"></span>
+                                        <a href="processamento.php?acao=excluir&id_perfil=<?= $perfil['id_perfil'] ?>" class="btn btn-sm btn-danger">
+                                            Excluir
                                         </a>
                                     </td>
                                     <td><?= $perfil['nome'] ?></td>

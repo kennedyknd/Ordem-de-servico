@@ -4,7 +4,6 @@ include_once '../Conexao.php';
 
 class Usuario
 {
-
     protected $id_usuario;
     protected $nome;
     protected $email;
@@ -129,24 +128,29 @@ class Usuario
 
     public function logar($dados)
     {
-
         $email = $dados['email'];
         $senha = md5($dados['senha']);
 
         $conexao = new Conexao();
 
 
-        $sql = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'";
-
+        $sql = "select * from usuario 
+                where email = '$email'
+                and senha = '$senha'";
         $dados = $conexao->recuperarDados($sql);
 
-        if (count($dados)){
+        if(count($dados)){
             $_SESSION['usuario']['id_usuario'] = $dados[0]['id_usuario'];
             $_SESSION['usuario']['nome'] = $dados[0]['nome'];
             $_SESSION['usuario']['email'] = $dados[0]['email'];
             $_SESSION['usuario']['id_perfil'] = $dados[0]['id_perfil'];
         }
 
+    }
+
+    public function deslogar()
+    {
+        unset($_SESSION['usuario']);
     }
 
     public function inserir($dados)
@@ -160,7 +164,8 @@ class Usuario
 
         $sql = "INSERT INTO usuario (nome, email, senha, id_perfil) 
                              VALUES ('$nome', '$email', '$senha', '$id_perfil')";
-        // print_r($sql); die;
+
+
         return $conexao->executar($sql);
     }
 
@@ -194,31 +199,38 @@ class Usuario
 
     public function possuiAcesso()
     {
-
-        $raizUrl = '/php/Ordem-de-servico/';
+        $raizUrl = '/php/Ordem-de-servico2/';
         $url = $_SERVER['REQUEST_URI'];
 
         $sql = "select * from pagina where publica = 1";
 
         $conexao = new Conexao();
-
         $paginas = $conexao->recuperarDados($sql);
 
+        // Verificando se página é pública
         foreach($paginas as $pagina){
-            if ($url == $raizUrl . $pagina['caminho']){
+            if($url == $raizUrl . $pagina['caminho']){
                 return true;
             }
         }
 
         if(!empty($_SESSION['usuario']['id_usuario'])){
-            return true;
+            $perfil = $_SESSION['usuario']['id_perfil'];
+
+            $sql = "select * from permissao pe
+                        inner join pagina pa on pa.id_pagina = pe.id_pagina
+                    where id_perfil = $perfil";
+
+            $paginas = $conexao->recuperarDados($sql);
+
+            // Verificando se o perfil tem acesso à página
+            foreach($paginas as $pagina){
+                if($url == $raizUrl . $pagina['caminho']){
+                    return true;
+                }
+            }
         }
+
         return false;
     }
-
-    public function deslogar()
-    {
-        unset($_SESSION['usuario']);
-    }
-
 }
