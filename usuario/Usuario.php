@@ -199,38 +199,37 @@ class Usuario
 
     public function possuiAcesso()
     {
-        $raizUrl = '/php/Ordem-de-servico2/';
+        $raizUrl = '/php/Ordem-de-servico/';
         $url = $_SERVER['REQUEST_URI'];
+        $url2 = explode('?',$url);
 
-        $sql = "select * from pagina where publica = 1";
-
+        $sql = "SELECT * FROM pagina WHERE publica = 1";
         $conexao = new Conexao();
         $paginas = $conexao->recuperarDados($sql);
 
-        // Verificando se página é pública
-        foreach($paginas as $pagina){
-            if($url == $raizUrl . $pagina['caminho']){
+        // Se a página for cadastrada como pública, libera o acesso
+        foreach ($paginas as $pagina){
+            if ($url2[0] == $raizUrl . $pagina['caminho']){
                 return true;
             }
         }
 
-        if(!empty($_SESSION['usuario']['id_usuario'])){
+        // Caso a página não seja pública, verifica se o usuário está logado
+        // para então verificar se ele tem acesso à página
+        if (!empty($_SESSION['usuario']['id_usuario'])){
             $perfil = $_SESSION['usuario']['id_perfil'];
-
-            $sql = "select * from permissao pe
-                        inner join pagina pa on pa.id_pagina = pe.id_pagina
-                    where id_perfil = $perfil";
-
+            $sql = "SELECT * FROM permissao pe
+                      INNER JOIN pagina pa on pa.id_pagina = pe.id_pagina
+                    WHERE id_perfil = $perfil";
             $paginas = $conexao->recuperarDados($sql);
 
-            // Verificando se o perfil tem acesso à página
-            foreach($paginas as $pagina){
-                if($url == $raizUrl . $pagina['caminho']){
+            foreach ($paginas as $pagina){
+                if ($url2[0] == $raizUrl . $pagina['caminho']){
                     return true;
                 }
             }
         }
-
         return false;
     }
+
 }

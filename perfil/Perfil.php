@@ -6,6 +6,7 @@ class Perfil
 {
     const PERFIL_ADMINISTRADOR = 2;
     const PERFIL_ATENDENTE = 3;
+    const PERFIL_SUPERVISOR = 4;
 
     protected $id_perfil;
     protected $nome;

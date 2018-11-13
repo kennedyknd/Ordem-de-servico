@@ -77,6 +77,16 @@ if(!$possuiAcesso){
         </div>
         <div class="contato">
             <p><b>Contato 61 9 9199 8496 - 61 3082 2014</b></p>
+
+            <ul>
+            <li>
+                <ul class="nav navbar-nav navbar-right user-nav">
+                    <li class="user-name"><span><?= $_SESSION['usuario']['nome']; ?></span></li>
+                    <li><a title="Sair" href="../usuario/processamento.php?acao=deslogar" class="">Sair</a></li>
+                </ul>
+            </li>
+            </ul>
+
         </div>
     </header>
     <nav class="navbar navbar-default">
@@ -120,7 +130,7 @@ if(!$possuiAcesso){
                     </li>
 
                     <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Forma Pagamento <span class="caret"></span></a>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Forma PGT <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="../formaPagamento/add.php">Nova Forma de Pagamento</a></li>
                             <li><a href="../formaPagamento/index.php">Visualizar Forma de Pagamentos</a></li>
@@ -128,7 +138,7 @@ if(!$possuiAcesso){
                     </li>
 
                     <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Método Pagamento <span class="caret"></span></a>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Método PGT <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="../metodoPagamento/add.php">Novo Método de Pagamento</a></li>
                             <li><a href="../metodoPagamento/index.php">Visualizar Método de Pagamentos</a></li>
@@ -143,12 +153,15 @@ if(!$possuiAcesso){
                         </ul>
                     </li>
 
-                    <li>
-                        <ul class="nav navbar-nav navbar-right user-nav">
-                            <li class="user-name"><span><?= $_SESSION['usuario']['nome']; ?></span></li>
-                            <li><a title="Sair" href="../usuario/processamento.php?acao=deslogar" class="opener-right-menu"><span class="fa fa-sign-out"></span></a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Administrador <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../pagina/index.php">Página</a></li>
+                            <li><a href="../usuario/index.php">Usuário</a></li>
+                            <li><a href="../perfil/index.php">Perfil</a></li>
                         </ul>
                     </li>
+
                 </ul>
             </div>
         </div>

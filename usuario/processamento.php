@@ -32,6 +32,9 @@ switch ($_GET['acao']) {
                 case Perfil::PERFIL_ATENDENTE:
                     header('location: ../index.php');
                     die;
+                case Perfil::PERFIL_SUPERVISOR:
+                    header('location: ../index.php');
+                    die;
                 default:
                     header('location: ../index.php');
                     die;
